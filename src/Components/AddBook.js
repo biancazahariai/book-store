@@ -38,6 +38,7 @@ export default function AddBook(props) {
               onChange={(event) =>
                 setDataHelper({ ...dataHelper, isbn: event.target.value })
               }
+              data-cy="isbnInput"
             />
           </div>
           <div className="grid grid-rows-2">
@@ -55,6 +56,7 @@ export default function AddBook(props) {
               onChange={(event) =>
                 setDataHelper({ ...dataHelper, title: event.target.value })
               }
+              data-cy="titleInput"
             />
           </div>
           <div className="grid grid-rows-2">
@@ -72,6 +74,7 @@ export default function AddBook(props) {
               onChange={(event) =>
                 setDataHelper({ ...dataHelper, author: event.target.value })
               }
+              data-cy="authorInput"
             />
           </div>
           <div className="grid grid-rows-2">
@@ -89,6 +92,7 @@ export default function AddBook(props) {
               onChange={(event) =>
                 setDataHelper({ ...dataHelper, quantity: event.target.value })
               }
+              data-cy="quantityInput"
             />
           </div>
           <div className="grid grid-rows-2">
@@ -107,6 +111,7 @@ export default function AddBook(props) {
               onChange={(event) =>
                 setDataHelper({ ...dataHelper, price: event.target.value })
               }
+              data-cy="priceInput"
             />
           </div>
           <div className="grid grid-rows-2">
@@ -121,11 +126,16 @@ export default function AddBook(props) {
               onChange={(event) =>
                 setDataHelper({ ...dataHelper, cover: event.target.value })
               }
+              data-cy="coverInput"
             />
           </div>
         </div>
         <div className="flex justify-center my-4">
-          <button type="submit" className="bg-[#f7edf7] w-24 h-8">
+          <button
+            type="submit"
+            className="bg-[#f7edf7] w-24 h-8"
+            data-cy="okButton"
+          >
             OK
           </button>
         </div>

@@ -22,6 +22,7 @@ const Modal = ({ handleClose, show, children }) => {
           onClick={handleClose}
           className="justify-self-end"
           style={{ position: "absolute", top: "0", right: "1%" }}
+          data-cy="closeModal"
         >
           X
         </button>

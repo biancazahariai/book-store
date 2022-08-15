@@ -76,17 +76,19 @@ export default function BookList() {
             className="mx-2"
             onChange={(event) => filterByTitle(event.target.value)}
             placeholder="Title"
+            data-cy="searchTitle"
           />
           <button
             type="button"
             onClick={() => setIsModalAddOpen(true)}
             className="bg-[#f7edf7] w-24 h-8"
+            data-cy="addBook"
           >
             Add
           </button>
         </div>
         <div className="grid grid-cols-4 gap-4">
-          {booksDisplayed.map((eachBook) => {
+          {booksDisplayed.map((eachBook, index) => {
             const checkRentAvability =
               eachBook.quantity - rentedBooks?.[eachBook?.isbn]?.length === 0;
             return (
@@ -95,6 +97,7 @@ export default function BookList() {
                   type="submit"
                   className="flex content-center flex-col justify-center h-72"
                   onClick={() => setModalInfo(eachBook, "seeInfo")}
+                  data-cy={`checkInfo${index}`}
                 >
                   <img
                     src={
@@ -121,6 +124,7 @@ export default function BookList() {
                     }
                     onClick={() => setModalInfo(eachBook, "rent")}
                     disabled={checkRentAvability}
+                    data-cy={`rentBook${index}`}
                   >
                     Rent Book
                   </button>
@@ -139,6 +143,7 @@ export default function BookList() {
                 ? "text-[#a08da1] mt-4"
                 : "text-[#352936] mt-4"
             }
+            data-cy="seeMore"
           >
             See more
           </button>

@@ -35,10 +35,9 @@ export const Books = [
   },
   {
     isbn: "643503",
-    title:
-      "CakePHP Application Development: Step-by-step introduction to rapid web development using the open-source MVC CakePHP framework",
+    title: "CakePHP Application Development",
     author: "Ahsanul Bari, Anupom Syam",
-    quantity: 3,
+    quantity: 5,
     price: "5.55",
     cover:
       "https://images-na.ssl-images-amazon.com/images/I/41DTkgS-NbL._SX404_BO1,204,203,200_.jpg",
@@ -71,6 +70,24 @@ export const RentedBooks = {
     {
       name: "Sadie Aldis",
       date: "Tue Jul 19 2022 21:26:45 GMT+0300 (Eastern European Summer Time)",
+    },
+  ],
+  643503: [
+    {
+      name: "Denis D",
+      date: "Mon Jul 4 2022 11:26:45 GMT+0300 (Eastern European Summer Time)",
+    },
+    {
+      name: "Stefan Vladimir",
+      date: "Tue Aug 6 2022 09:26:45 GMT+0300 (Eastern European Summer Time)",
+    },
+    {
+      name: "Martin Nestle",
+      date: "Wen Aug 7 2022 09:26:45 GMT+0300 (Eastern European Summer Time)",
+    },
+    {
+      name: "Lidia Chelsea",
+      date: "Fri Jul 22 2022 15:26:45 GMT+0300 (Eastern European Summer Time)",
     },
   ],
 };

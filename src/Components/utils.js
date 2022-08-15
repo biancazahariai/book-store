@@ -14,7 +14,9 @@ export const checkRentedDate = (date, modalData) => {
     const lateFee = 0.01 * modalData.price * daysLate;
     return {
       lateFee: `${lateFee} $`,
-      totalPayment: `${parseFloat(lateFee) + parseFloat(modalData?.price)} $`,
+      totalPayment: `${(
+        parseFloat(lateFee) + parseFloat(modalData?.price)
+      ).toFixed(2)} $`,
     };
   }
   return {

@@ -75,6 +75,7 @@ export default function BookInfo({ modalData, rentedBooks, setRentedBooks }) {
                     type="button"
                     className="hover:bg-[#c7c4cc] w-24"
                     onClick={() => bookBack(item)}
+                    data-cy={`bookBack${index}`}
                   >
                     Book back
                   </button>

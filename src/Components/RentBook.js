@@ -33,11 +33,16 @@ export default function RentBook(props) {
               onChange={(event) =>
                 setDataHelper({ ...dataHelper, name: event.target.value })
               }
+              data-cy="nameInput"
             />
           </div>
         </div>
         <div className="flex justify-center my-4">
-          <button type="submit" className="bg-[#f7edf7] w-24 h-8">
+          <button
+            type="submit"
+            className="bg-[#f7edf7] w-24 h-8"
+            data-cy="okButton"
+          >
             OK
           </button>
         </div>
