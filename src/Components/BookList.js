@@ -65,7 +65,7 @@ export default function BookList() {
         className={ismodalOpen || ismodalAddOpen ? "opacity-10" : ""}
         ref={scrollRef}
       >
-        <div className="grid grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-4 sm:grid-flow-row gap-6 mb-16">
           <div className="text-2xl font-semibold">Book List</div>
           <div className="ml-auto" />
           <input
@@ -87,7 +87,7 @@ export default function BookList() {
             Add
           </button>
         </div>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-4 sm:grid-flow-row gap-4">
           {booksDisplayed.map((eachBook, index) => {
             const checkRentAvability =
               eachBook.quantity - rentedBooks?.[eachBook?.isbn]?.length === 0;
@@ -107,7 +107,7 @@ export default function BookList() {
                     alt="/"
                     className="w-36 h-56 my-4 self-center"
                   />
-                  <h4 className=" m-auto">{eachBook?.title}</h4>
+                  <h4 className="text-xs m-auto">{eachBook?.title}</h4>
                 </button>
                 {eachBook.quantity !== 0 ? (
                   <StatusTag status="inStock" />

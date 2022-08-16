@@ -31,7 +31,7 @@ export default function BookInfo({ modalData, rentedBooks, setRentedBooks }) {
     <>
       <h2 className="text-xl font-semibold">{modalData.title}</h2>
       <h3 className="text-lg">{modalData.author}</h3>
-      <div className="grid grid-cols-3 gap-2 my-4">
+      <div className="grid md:grid-cols-3 sm:grid-flow-row gap-2 my-4">
         {cardInfo?.map((eachInfo) => {
           return (
             <div
@@ -49,7 +49,7 @@ export default function BookInfo({ modalData, rentedBooks, setRentedBooks }) {
         })}
       </div>
       <div className="my-4">
-        <table className="w-5/6  mx-auto">
+        <table className="md:w-5/6 mx-auto sm:table-auto">
           <tr style={{ border: "1.5px solid black" }}>
             <th>Name</th>
             <th>Book rental date</th>
